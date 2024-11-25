@@ -1,0 +1,163 @@
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; 
+    z-index: 1000; 
+}
+
+h3 {
+    width: 150px; 
+    height: auto; 
+    font-family: 'Archivo Black', sans-serif;
+    color: #db4a2b;
+    font-weight: 300; 
+    font-size: 2rem; 
+    line-height: 1.2; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    cursor: pointer;
+}
+
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    color: #49557e;
+    font-family: 'Mon', sans-serif; /* or serif, depending on the style */
+
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0; 
+    margin: 0;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 80px;
+}
+
+.navbar button {
+    background: transparent;
+    font-family: 'Mon', sans-serif;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+@media (max-width: 1050px) {
+    .navbar h3 {
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right {
+        gap: 10px; 
+    }
+    .navbar-right img {
+        width: 22px;
+    }
+    .navbar-right button {
+        padding: 8px 22px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar h3 {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 10px; 
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar-menu {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 70px; 
+        left: 0; 
+        right: 0; 
+        background-color: #fff; 
+        z-index: 999; 
+        padding: 20px 0;
+    }
+}
+@media (max-width: 590px) {
+    .navbar-right{
+        margin-left: 80px;
+    }
+}
+@media (max-width: 330px) {
+    .navbar h3 {
+        margin-left: 5px; /* Move h3 a bit to the left */
+        margin-right: 10px; /* Existing margin on the right */
+        font-size: 1.5rem; /* Smaller font size for better fit */
+    }
+    .navbar-right {
+        gap: 5px; /* Reduce gap between items on the right */
+        
+    }
+    .navbar button {
+        padding: 8px 15px; /* Smaller button padding */
+        font-size: 14px; /* Smaller button text */
+    }
+}

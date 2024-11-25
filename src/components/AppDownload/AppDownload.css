@@ -1,0 +1,210 @@
+.all {
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    margin-top: 150px;
+}
+
+.side1 {
+    flex: 1;
+}
+
+.side1 img {
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+    margin-left: 200px;
+}
+
+.side2 {
+    flex: 1;
+    padding-left: 2rem;
+    margin-right: 200px;
+}
+
+.side2 h1 {
+    color: rgb(28, 28, 28);
+    margin: 0px 0px 1.5rem;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 2.6rem;
+}
+
+.side2 p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Radio Buttons */
+.side2 label {
+    font-size: 1rem;
+    margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+}
+
+.side2 input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: #fa5757;
+}
+
+/* Input Fields */
+.side2 input[type="email"],
+.side2 input[type="tel"] {
+    padding: 1.25rem 1.15rem;
+    height: 2.4rem;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    width: 340px; 
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: rgb(202, 198, 198);
+}
+
+/* Full-width class (optional) */
+.input-full-width {
+    width: 100%;
+}
+
+.phone-input-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 350px;
+}
+
+.phone-input-container select {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.phone-input-container input[type="tel"] {
+    flex: 1; /* Makes input take up remaining space */
+    padding: 1.25rem 1.15rem;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+    font-size: 18px;
+    color: rgb(28, 28, 28);
+    outline: none;
+    box-sizing: border-box;
+}
+.email-input-container{
+    width: 100px;
+}
+
+/* Button */
+.side2 button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #fa5757;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.side2 button.active {
+    background-color: #fa5757;
+    cursor: pointer;
+}
+
+.side2 button:hover.active {
+    background-color: #e64545;
+}
+
+/* Error Message */
+.errMess {
+    font-size: 0.9rem;
+    color: #fa5757;
+    margin-top: -10px;
+}
+
+/* Download Images */
+.downloadimgs {
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: #333;
+}
+
+.DownloadImages {
+    display: flex;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.DownloadImages img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.DownloadImages img:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media all and (max-width: 768px) {
+    .outerDiv {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .side1 {
+        margin-bottom: 2rem;
+    }
+
+    .side2 {
+        padding-left: 0;
+    }
+
+    .side2 h1 {
+        font-size: 2rem;
+    }
+
+    .DownloadImages img {
+        width: 120px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .all{
+        margin-top: 100px;
+        margin-left: 30px;
+    }
+    .side1 img {
+        display: none;
+    }
+
+    .side2 h1 {
+        font-size: 1.7rem;
+        margin-left: 30px;
+        line-height: 1;
+    }
+
+    .side2 p {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+    .side2 button{
+        margin-left: 80px;
+    }
+    .alllabels{
+        margin-left: 20px;
+    }
+   .downloadimgs{
+    display: none;
+   }
+    .DownloadImages {
+       display: none;
+    }
+}
