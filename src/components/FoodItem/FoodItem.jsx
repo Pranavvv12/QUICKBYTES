@@ -1,30 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './FoodItem.css'; 
 import white from './add_icon_white.png';
 import red from './remove_icon_red.png';
 import green from './add_icon_green.png';
 import stars from './rating_starts.png';
 
-const FoodItem = ({ id, name, price, description, image }) => {
-    const [cartItems, setCartItems] = useState({});
-
-    const addToCart = (itemId) => {
-        if (!cartItems[itemId]) {
-            setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
-          } else {
-            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-          }
-    };
-
-    const removeFromCart = (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
-    };
+const FoodItem = ({ id, name, price, description, image, cartItems, addToCart, removeFromCart }) => {
+    const itemCount = cartItems[id] || 0; // Fallback to 0 if undefined
 
     return (
         <div className='food-item'>
             <div className="food-item-img-container">
                 <img className='food-item-image' src={image} alt={name} />
-                {!cartItems[id] ? (
+                {itemCount === 0 ? (
                     <img
                         className='add'
                         onClick={() => addToCart(id)}
@@ -38,7 +26,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
                             src={red}
                             alt='Remove from cart'
                         />
-                        <p>{cartItems[id]}</p>
+                        <p>{itemCount}</p> {/* Display count safely */}
                         <img
                             onClick={() => addToCart(id)}
                             src={green}

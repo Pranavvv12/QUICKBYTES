@@ -36,7 +36,7 @@ import './FoodDisplay.css';
 import FoodItem from '../FoodItem/FoodItem'; 
 import { food_list } from './FoodList';
 
-const FoodDisplay = () => {
+const FoodDisplay = ({ cartItems, addToCart, removeFromCart }) => {
     const [category, setCategory] = useState("All");
     const [showAll, setShowAll] = useState(false); 
 
@@ -70,6 +70,9 @@ const FoodDisplay = () => {
                                 description={item.description}
                                 price={item.price}
                                 image={item.image}
+                                cartItems={cartItems} // Pass the state
+                                addToCart={addToCart}
+                                removeFromCart={removeFromCart}
                             />
                         );
                     }
@@ -81,5 +84,3 @@ const FoodDisplay = () => {
 };
 
 export default FoodDisplay;
-
-

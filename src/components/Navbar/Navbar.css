@@ -24,6 +24,23 @@ h3 {
     margin-right: 20px; 
     cursor: pointer;
 }
+.navbar-menu a, .navbar-menu .active, .navbar-menu li a {
+    text-decoration: none; /* Removes the underline */
+    color: #49557e; /* Sets your desired text color */
+    transition: color 0.3s ease; /* Optional: Smooth color transition */
+}
+
+.navbar-menu a:hover, .navbar-menu li a:hover {
+    color: tomato; /* Change color on hover (optional) */
+}
+
+/* To ensure consistent color for active menu items */
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e; /* Keeps active indicator */
+    color: #49557e; /* Matches the regular text color */
+    text-decoration: none; /* Prevent underline for active links */
+}
 
 
 .navbar-menu {

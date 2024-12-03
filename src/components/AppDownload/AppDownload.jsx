@@ -14,7 +14,7 @@ const Appd = () => {
     }
 
     return (
-        <div>
+        <div id="app-download">
             <div className="all">
                 <div className="side1">
                     <img src={mobile} alt="Mobile Img" />

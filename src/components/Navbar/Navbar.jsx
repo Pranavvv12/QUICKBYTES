@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({setShowLogin}) => {
     const [menu, setMenu] = useState("home");
-
+    
     return (
         <div className='navbar'>
             <h3>QuickBytes</h3>
@@ -28,14 +28,11 @@ const Navbar = ({setShowLogin}) => {
             <div className="navbar-right">
                 <img src={searchicon} alt="Search Icon" />
                 <div className="navbar-search-icon">
-                    <img src={basketicon} alt="Basket Icon" />
+                  <Link to='/cart'><img src={basketicon} alt="Basket Icon" /></Link>
                 </div>
                 <button onClick={()=>setShowLogin(true)}>Sign in</button>
-            </div>
-            
-            
-        </div>
+            </div>    
+        </div>        
     );
 }
-
 export default Navbar;
