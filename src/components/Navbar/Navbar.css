@@ -105,76 +105,173 @@ h3 {
     top: -8px;
     right: -8px;
 }
-
-@media (max-width: 1050px) {
-    .navbar h3 {
-        width: 140px;
-    }
-    .navbar-menu {
-        gap: 20px;
-        font-size: 17px;
-    }
-    .navbar-right {
-        gap: 10px; 
-    }
-    .navbar-right img {
-        width: 22px;
-    }
-    .navbar-right button {
-        padding: 8px 22px;
-    }
+body {
+    margin: 0;
 }
 
-@media (max-width: 900px) {
-    .navbar h3 {
-        width: 120px;
-    }
+.navbar {
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; 
+    z-index: 1000; 
+}
+
+h3 {
+    width: 150px; 
+    height: auto; 
+    font-family: 'Archivo Black', sans-serif;
+    color: #db4a2b;
+    font-weight: 300; 
+    font-size: 2rem; 
+    line-height: 1.2; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    cursor: pointer;
+}
+
+.navbar-menu a, .navbar-menu .active, .navbar-menu li a {
+    text-decoration: none; /* Removes the underline */
+    color: #49557e; /* Sets your desired text color */
+    transition: color 0.3s ease; /* Optional: Smooth color transition */
+}
+
+.navbar-menu a:hover, .navbar-menu li a:hover {
+    color: tomato; /* Change color on hover (optional) */
+}
+
+/* To ensure consistent color for active menu items */
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e; /* Keeps active indicator */
+    color: #49557e; /* Matches the regular text color */
+    text-decoration: none; /* Prevent underline for active links */
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    color: #49557e;
+    font-family: 'Mon', sans-serif; /* or serif, depending on the style */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0; 
+    margin: 0;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 80px;
+}
+
+.navbar button {
+    background: transparent;
+    font-family: 'Mon', sans-serif;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+@media (max-width: 768px) {
+    /* Hide the menu links on mobile devices */
     .navbar-menu {
-        gap: 15px;
-        font-size: 16px;
+        display: none;
     }
+
+    .navbar {
+        flex-wrap: wrap; /* Allows elements to stack if needed */
+        padding: 10px 20px;
+    }
+
+    .navbar h3 {
+        font-size: 1.8rem;
+        margin-left: 10px;
+    }
+
     .navbar-right {
-        gap: 10px; 
+        gap: 15px; /* Adjust spacing for remaining elements */
+        margin-right: 20px;
     }
+
     .navbar-right img {
-        width: 20px;
+        width: 20px; /* Adjust icon size */
     }
+
     .navbar-right button {
         padding: 7px 20px;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
-@media (max-width: 650px) {
-    .navbar-menu {
-        display: none; 
-        flex-direction: column; 
-        position: absolute; 
-        top: 70px; 
-        left: 0; 
-        right: 0; 
-        background-color: #fff; 
-        z-index: 999; 
-        padding: 20px 0;
+@media (max-width: 480px) {
+    .navbar h3 {
+        font-size: 1.4rem; /* Reduce logo size slightly for smaller screens */
+        margin-left: 10px;
+    }
+
+    .navbar-right {
+        gap: 8px; /* Reduce gap between items */
+    }
+
+    .navbar-right img {
+        width: 18px; /* Smaller icon size */
+    }
+
+    .navbar-right button {
+        padding: 5px 12px; /* Smaller button padding */
+        font-size: 13px; /* Smaller button font size */
     }
 }
-@media (max-width: 590px) {
-    .navbar-right{
-        margin-left: 80px;
-    }
-}
+
 @media (max-width: 330px) {
+    .navbar {
+        padding: 10px;
+    }
+
     .navbar h3 {
         margin-left: 5px; /* Move h3 a bit to the left */
-        margin-right: 10px; /* Existing margin on the right */
-        font-size: 1.5rem; /* Smaller font size for better fit */
+        font-size: 1.2rem; /* Smaller font size */
     }
+
     .navbar-right {
-        gap: 5px; /* Reduce gap between items on the right */
-        
+        gap: 5px; /* Reduce gap */
     }
+
     .navbar button {
-        padding: 8px 15px; /* Smaller button padding */
-        font-size: 14px; /* Smaller button text */
+        padding: 4px 10px; /* Smaller button padding */
+        font-size: 12px; /* Smaller button text */
     }
 }

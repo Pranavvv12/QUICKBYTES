@@ -1,8 +1,9 @@
+
 .all {
     display: flex;
     justify-content: space-between;
     gap: 1px;
-    margin-top: 150px;
+    margin-top: 180px;
 }
 
 .side1 {
@@ -37,7 +38,7 @@
     color: #333;
 }
 
-/* Radio Buttons */
+
 .side2 label {
     font-size: 1rem;
     margin-right: 1rem;
@@ -50,9 +51,9 @@
 .side2 input[type="radio"] {
     margin-right: 0.5rem;
     accent-color: #fa5757;
+    
 }
 
-/* Input Fields */
 .side2 input[type="email"],
 .side2 input[type="tel"] {
     padding: 1.25rem 1.15rem;
@@ -64,11 +65,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     color: rgb(202, 198, 198);
-}
-
-/* Full-width class (optional) */
-.input-full-width {
-    width: 100%;
+    
 }
 
 .phone-input-container {
@@ -87,7 +84,7 @@
 }
 
 .phone-input-container input[type="tel"] {
-    flex: 1; /* Makes input take up remaining space */
+    flex: 1;
     padding: 1.25rem 1.15rem;
     border: 1px solid #ccc;
     border-radius: 0.6rem;
@@ -96,7 +93,8 @@
     outline: none;
     box-sizing: border-box;
 }
-.email-input-container{
+
+.email-input-container {
     width: 100px;
 }
 
@@ -110,6 +108,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
+    width: 340px; /* Consistent button width */
 }
 
 .side2 button.active {
@@ -151,60 +150,117 @@
 .DownloadImages img:hover {
     opacity: 0.8;
 }
-
-/* Responsive Design */
+/* Mobile View CSS - Max Width 768px */
 @media all and (max-width: 768px) {
-    .outerDiv {
-        flex-direction: column;
-        padding: 2rem;
+    .all {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        margin: 30px 10px; /* Adjust margins for mobile */
     }
 
-    .side1 {
-        margin-bottom: 2rem;
+    .side1 img {
+        display: none; /* Hide the side1 image on mobile */
     }
 
     .side2 {
-        padding-left: 0;
+        text-align: center; /* Center-align text and inputs */
+        padding: 0;
+        margin: 0 auto;
     }
 
     .side2 h1 {
-        font-size: 2rem;
-    }
-
-    .DownloadImages img {
-        width: 120px;
-    }
-}
-
-@media all and (max-width: 480px) {
-    .all{
-        margin-top: 100px;
-        margin-left: 30px;
-    }
-    .side1 img {
-        display: none;
-    }
-
-    .side2 h1 {
-        font-size: 1.7rem;
-        margin-left: 30px;
-        line-height: 1;
+        font-size: 1.8rem; /* Adjust heading size */
+        margin-bottom: 15px;
+        line-height: 2rem;
     }
 
     .side2 p {
         font-size: 1rem;
-        margin-left: 20px;
+        margin-bottom: 20px;
     }
-    .side2 button{
-        margin-left: 80px;
+
+    .side2 label {
+        font-size: 1rem;
+        margin-right: 1rem;
     }
-    .alllabels{
-        margin-left: 20px;
+
+    .side2 input[type="email"],
+    .side2 input[type="tel"] {
+        width: 90%; /* Full-width inputs with spacing */
+        padding: 1.2rem;
+        font-size: 16px;
     }
-   .downloadimgs{
-    display: none;
-   }
+
+    .phone-input-container {
+        flex-direction: row; /* Align select and input horizontally */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%; /* Full-width container */
+    }
+
+    .phone-input-container select {
+        width: 20%; /* Make select smaller */
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .side2 button {
+        width: 90%; /* Full-width button */
+        font-size: 1rem;
+        padding: 12px;
+        margin-top: 20px;
+    }
+
+    .downloadimgs {
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+
     .DownloadImages {
-       display: none;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .DownloadImages img {
+        width: 120px; /* Resize images */
+    }
+}
+
+/* Extra Small Devices - Max Width 480px */
+@media all and (max-width: 480px) {
+    .all {
+        margin: 20px 5px; /* Further reduce margins */
+        margin-top: 100px;
+    }
+
+    .side2 h1 {
+        font-size: 1.5rem; /* Smaller heading */
+        line-height: 1.8rem;
+    }
+
+    .side2 p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    .side2 input[type="email"],
+    .side2 input[type="tel"] {
+        width: 95%; /* Even smaller width */
+    }
+
+    .side2 button {
+        font-size: 0.9rem; /* Smaller button */
+        padding: 10px;
+    }
+
+    .DownloadImages img {
+        width: 100px; /* Smaller icons */
+    }
+
+    .downloadimgs {
+        font-size: 0.8rem; /* Adjust text size */
     }
 }
